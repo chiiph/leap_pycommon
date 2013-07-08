@@ -1,0 +1,2 @@
+  o Add CheckerMock class to mock methods and check that they are
+    called with the right parameters.
