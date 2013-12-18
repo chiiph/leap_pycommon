@@ -76,11 +76,7 @@ class _memoized(object):
             logger.debug("Got value from cache...")
             return self.cache[key]
         else:
-            try:
-                value = self.func(*args, **kwargs)
-            except Exception as exc:
-                logger.error("Exception while calling function: %r" % (exc,))
-                value = None
+            value = self.func(*args, **kwargs)
             self.cache[key] = value
             return value
 
